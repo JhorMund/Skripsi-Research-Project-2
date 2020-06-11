@@ -15,13 +15,13 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
-import SectionBasics from "pages-sections/Components-Sections/SectionBasics.js";
-import SectionNavbars from "pages-sections/Components-Sections/SectionNavbars.js";
-import SectionTabs from "pages-sections/Components-Sections/SectionTabs.js";
-import SectionPills from "pages-sections/Components-Sections/SectionPills.js";
-import SectionNotifications from "pages-sections/Components-Sections/SectionNotifications.js";
-import SectionTypography from "pages-sections/Components-Sections/SectionTypography.js";
-import SectionJavascript from "pages-sections/Components-Sections/SectionJavascript.js";
+//import SectionBasics from "pages-sections/Components-Sections/SectionBasics.js";
+//import SectionNavbars from "pages-sections/Components-Sections/SectionNavbars.js";
+//import SectionTabs from "pages-sections/Components-Sections/SectionTabs.js";
+//import SectionPills from "pages-sections/Components-Sections/SectionPills.js";
+//import SectionNotifications from "pages-sections/Components-Sections/SectionNotifications.js";
+//import SectionTypography from "pages-sections/Components-Sections/SectionTypography.js";
+//import SectionJavascript from "pages-sections/Components-Sections/SectionJavascript.js";
 import SectionCarousel from "pages-sections/Components-Sections/SectionCarousel.js";
 import SectionCompletedExamples from "pages-sections/Components-Sections/SectionCompletedExamples.js";
 import SectionLogin from "pages-sections/Components-Sections/SectionLogin.js";
@@ -38,7 +38,7 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="NextJS Material Kit"
+        brand="TaniBisnisShop"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
@@ -64,14 +64,17 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
-        <SectionNavbars />
-        <SectionTabs />
-        <SectionPills />
-        <SectionNotifications />
-        <SectionTypography />
-        <SectionJavascript />
+
         <SectionCarousel />
+        <GridItem md={12} className={classes.textCenter}>
+          <Link href="/login">
+            <a className={classes.link}>
+              <Button color="primary" size="lg" simple>
+                View All Product
+              </Button>
+            </a>
+          </Link>
+        </GridItem>
         <SectionCompletedExamples />
         <SectionLogin />
         <GridItem md={12} className={classes.textCenter}>

@@ -30,7 +30,7 @@ export default function HeaderLinks(props) {
         <CustomDropdown
           noLiPadding
           navDropdown
-          buttonText="Components"
+          buttonText="Product"
           buttonProps={{
             className: classes.navLink,
             color: "transparent"
@@ -38,7 +38,7 @@ export default function HeaderLinks(props) {
           buttonIcon={Apps}
           dropdownList={[
             <Link href="/components">
-              <a className={classes.dropdownLink}>All components</a>
+              <a className={classes.dropdownLink}>All Product</a>
             </Link>,
             <a
               href="https://creativetimofficial.github.io/nextjs-material-kit/#/documentation?ref=njsmk-navbar"
@@ -49,6 +49,16 @@ export default function HeaderLinks(props) {
             </a>
           ]}
         />
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="../profile"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <Icon className={classes.icons}></Icon> PROFILE
+        </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
@@ -125,6 +135,16 @@ export default function HeaderLinks(props) {
             <i className={classes.socialIcons + " fab fa-instagram"} />
           </Button>
         </Tooltip>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Button
+          href="../login"
+          color="transparent"
+          target="_blank"
+          className={classes.navLink}
+        >
+          <Icon className={classes.icons}></Icon> Login
+        </Button>
       </ListItem>
     </List>
   );
