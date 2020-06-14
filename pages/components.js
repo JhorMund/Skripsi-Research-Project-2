@@ -24,7 +24,7 @@ import Parallax from "components/Parallax/Parallax.js";
 //import SectionJavascript from "pages-sections/Components-Sections/SectionJavascript.js";
 import SectionCarousel from "pages-sections/Components-Sections/SectionCarousel.js";
 import SectionCompletedExamples from "pages-sections/Components-Sections/SectionCompletedExamples.js";
-import SectionLogin from "pages-sections/Components-Sections/SectionLogin.js";
+//import SectionLogin from "pages-sections/Components-Sections/SectionLogin.js";
 import SectionExamples from "pages-sections/Components-Sections/SectionExamples.js";
 import SectionDownload from "pages-sections/Components-Sections/SectionDownload.js";
 
@@ -53,7 +53,7 @@ export default function Components(props) {
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>Welcome to TaniBisnisShopp</h1>
+                <h1 className={classes.title}>Welcome to TaniBisnisShop</h1>
                 <h3 className={classes.subtitle}>
                   This webpak is a research project in the last smester of computer science!!
                 </h3>
@@ -76,7 +76,7 @@ export default function Components(props) {
           </Link>
         </GridItem>
         <SectionCompletedExamples />
-        <SectionLogin />
+        
         <GridItem md={12} className={classes.textCenter}>
           <Link href="/login">
             <a className={classes.link}>

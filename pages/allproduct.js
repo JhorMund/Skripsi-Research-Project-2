@@ -19,11 +19,14 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import profile from "assets/img/faces/vinyati.jpg";
 
-import studio1 from "assets/img/examples/studio-1.jpg";
-import studio2 from "assets/img/examples/studio-2.jpg";
+import alpukat from "assets/img/examples/alpukat.jpg";
+import lemon1 from "assets/img/examples/lemon1.jpg";
+import manggis from "assets/img/examples/manggis.jpg";
+import mangga from "assets/img/examples/mangga.jpg";
 import studio3 from "assets/img/examples/studio-3.jpg";
+import studio1 from "assets/img/examples/studio-3.jpg";
 import studio4 from "assets/img/examples/studio-4.jpg";
-import studio5 from "assets/img/examples/studio-5.jpg";
+import studio2 from "assets/img/examples/studio-5.jpg";
 import work1 from "assets/img/examples/olu-eletu.jpg";
 import work2 from "assets/img/examples/clem-onojeghuo.jpg";
 import work3 from "assets/img/examples/cynthia-del-rio.jpg";
@@ -61,67 +64,37 @@ export default function ProfilePage(props) {
         <div>
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={6}>
-                <div className={classes.profile}>
-                  <div>
-                    <img src={profile} alt="..." className={imageClasses} />
-                  </div>
-                  <div className={classes.name}>
-                    <h3 className={classes.title}>Vinyati Watuseke</h3>
-                    <h6>Mahasiswi Fakultas Ilmu Komputer Jurusan Teknik Informatika di UniversitasKlabat </h6>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-twitter"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-instagram"} />
-                    </Button>
-                    <Button justIcon link className={classes.margin5}>
-                      <i className={"fab fa-facebook"} />
-                    </Button>
-                  </div>
-                </div>
-              </GridItem>
-            </GridContainer>
-            <div className={classes.description}>
-              <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{" "}
-              </p>
-            </div>
-            <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
+              <GridItem xs={12} sm={12} md={10} className={classes.navWrapper}>
                 <NavPills
                   alignCenter
                   color="primary"
                   tabs={[
                     {
-                      tabButton: "Studio",
-                      tabIcon: Camera,
+                      tabButton: "Buah-buahan",
+                      tabIcon: Favorite,
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
-                              src={studio1}
+                              src={alpukat}
                               className={navImageClasses}
                             />
                             <img
                               alt="..."
-                              src={studio2}
+                              src={mangga}
                               className={navImageClasses}
                             />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
                             <img
                               alt="..."
-                              src={studio5}
+                              src={lemon1}
                               className={navImageClasses}
                             />
                             <img
                               alt="..."
-                              src={studio4}
+                              src={manggis}
                               className={navImageClasses}
                             />
                           </GridItem>
@@ -129,8 +102,8 @@ export default function ProfilePage(props) {
                       )
                     },
                     {
-                      tabButton: "Work",
-                      tabIcon: Palette,
+                      tabButton: "Sayur-sayuran",
+                      tabIcon: Favorite,
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
@@ -166,7 +139,104 @@ export default function ProfilePage(props) {
                       )
                     },
                     {
-                      tabButton: "Favorite",
+                        tabButton: "Rempah-rempah",
+                        tabIcon: Favorite,
+                        tabContent: (
+                          <GridContainer justify="center">
+                            <GridItem xs={12} sm={12} md={4}>
+                              <img
+                                alt="..."
+                                src={work1}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={work2}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={work3}
+                                className={navImageClasses}
+                              />
+                            </GridItem>
+                            <GridItem xs={12} sm={12} md={4}>
+                              <img
+                                alt="..."
+                                src={work4}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={work5}
+                                className={navImageClasses}
+                              />
+                            </GridItem>
+                          </GridContainer>
+                        )
+                      },
+                      {
+                        tabButton: "Sembako",
+                        tabIcon: Favorite,
+                        tabContent: (
+                          <GridContainer justify="center">
+                            <GridItem xs={12} sm={12} md={4}>
+                              <img
+                                alt="..."
+                                src={work1}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={studio2}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={work2}
+                                className={navImageClasses}
+                              />
+                            </GridItem>
+                            <GridItem xs={12} sm={12} md={4}>
+                              <img
+                                alt="..."
+                                src={work4}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={work3}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={studio3}
+                                className={navImageClasses}
+                              />
+                            
+                            </GridItem>
+                            <GridItem xs={12} sm={12} md={4}>
+                              <img
+                                alt="..."
+                                src={work1}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={studio2}
+                                className={navImageClasses}
+                              />
+                              <img
+                                alt="..."
+                                src={work2}
+                                className={navImageClasses}
+                              />
+                            </GridItem>
+                          </GridContainer>
+                        )
+                      },
+                    {
+                      tabButton: "Umbi-umbian",
                       tabIcon: Favorite,
                       tabContent: (
                         <GridContainer justify="center">
@@ -199,6 +269,7 @@ export default function ProfilePage(props) {
                               className={navImageClasses}
                             />
                           </GridItem>
+                          
                         </GridContainer>
                       )
                     }
