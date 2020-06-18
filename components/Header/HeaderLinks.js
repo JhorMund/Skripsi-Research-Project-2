@@ -8,24 +8,55 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 import Icon from "@material-ui/core/Icon";
-
 // @material-ui/icons
+import Search from "@material-ui/icons/Search";
+import Email from "@material-ui/icons/Email";
+import Face from "@material-ui/icons/Face";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import Explore from "@material-ui/icons/Explore";
+
 import { Apps, CloudDownload } from "@material-ui/icons";
 import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
 
 // core components
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Header from "components/Header/Header.js";
+import CustomInput from "components/CustomInput/CustomInput.js";
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
-import styles from "assets/jss/nextjs-material-kit/components/headerLinksStyle.js";
+import styles from "assets/jss/nextjs-material-kit/pages/componentsSections/navbarsStyle.js";
+
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
   return (
+    
     <List className={classes.list}>
+      <ListItem className={classes.listItem}>
+      <CustomInput
+                  white
+                  inputRootCustomClasses={classes.inputRootCustomClasses}
+                  formControlProps={{
+                    className: classes.formControl
+                  }}
+                  inputProps={{
+                    placeholder: "Search",
+                    inputProps: {
+                      "aria-label": "Search",
+                      className: classes.searchInput
+                    }
+                  }}
+                />
+                <Button justIcon round color="transparent">
+                  <Search className={classes.searchIcon} />
+                </Button>
+      </ListItem>
+
       <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
@@ -37,7 +68,7 @@ export default function HeaderLinks(props) {
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link href="/components">
+            <Link href="../allproduct">
               <a className={classes.dropdownLink}>All Product</a>
             </Link>,
             <a
@@ -50,6 +81,7 @@ export default function HeaderLinks(props) {
           ]}
         />
       </ListItem>
+      
       <ListItem className={classes.listItem}>
         <Button
           href="../profile"
@@ -62,82 +94,6 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmk-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <Icon className={classes.icons}>unarchive</Icon> Upgrade to PRO
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        {/*<Tooltip title="Delete">
-          <IconButton aria-label="Delete">
-            <DeleteIcon />
-          </IconButton>
-        </Tooltip>*/}
-        <Tooltip
-          id="instagram-twitter"
-          title="Follow us on twitter"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            href="https://twitter.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            color="transparent"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-twitter"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-facebook"
-          title="Follow us on facebook"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-facebook"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          id="instagram-tooltip"
-          title="Follow us on instagram"
-          placement={"top"}
-          classes={{ tooltip: classes.tooltip }}
-        >
-          <Button
-            color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
-            target="_blank"
-            className={classes.navLink}
-          >
-            <i className={classes.socialIcons + " fab fa-instagram"} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
           href="../login"
           color="transparent"
           target="_blank"
@@ -145,7 +101,44 @@ export default function HeaderLinks(props) {
         >
           <Icon className={classes.icons}></Icon> Login
         </Button>
+        
       </ListItem>
+      <ListItem className={classes.listItem}>
+                  <Button
+                    justIcon
+                    round
+                    href="#pablo"
+                    className={classes.notificationNavLink}
+                    onClick={e => e.preventDefault()}
+                    color="transparent"
+                  >
+                    <Email className={classes.icons} />
+                  </Button>
+                </ListItem>
+                <ListItem className={classes.listItem}>
+                    <CustomDropdown
+                      left
+                      navDropdown
+                      hoverColor="info"
+                      dropdownHeader="Dropdown Header"
+                      buttonIcon="settings"
+                      buttonProps={{
+                        className: classes.navLink,
+                        color: "transparent"
+                      }}
+                      dropdownList={[
+                        "Action",
+                        "Another action",
+                        "Something else here",
+                        { divider: true },
+                        "Separated link",
+                        { divider: true },
+                        "One more separated link"
+                      ]}
+                    />
+                  </ListItem>
     </List>
+    
   );
 }
+

@@ -216,11 +216,12 @@ export default function SectionNavbars() {
                 <ListItem className={classes.listItem}>
                   <Button
                     href="#pablo"
+                    buttonIcon="settings"
                     className={classes.navLink}
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    Settings
+                    
                   </Button>
                 </ListItem>
               </List>
