@@ -83,11 +83,28 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
+                          <Button
+                              href="../detailalpukat"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
                               src={alpukat}
                               className={navImageClasses}
                             />
+                            <br/>
+                            <Button
+                              href="../detailmanggis"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
                               src={mangga}
@@ -95,11 +112,28 @@ export default function ProfilePage(props) {
                             />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
+                          <Button
+                              href="../detailmanggis"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
                               src={lemon1}
                               className={navImageClasses}
                             />
+                            <br/>
+                            <Button
+                              href="../detailmanggis"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
                               src={manggis}
