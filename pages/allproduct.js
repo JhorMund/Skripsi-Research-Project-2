@@ -19,18 +19,22 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import profile from "assets/img/faces/vinyati.jpg";
 
-import alpukat from "assets/img/examples/alpukat.jpg";
-import lemon1 from "assets/img/examples/lemon1.jpg";
-import manggis from "assets/img/examples/manggis.jpg";
-import mangga from "assets/img/examples/mangga.jpg";
-import sayurkol from "assets/img/examples/sayurkol.jpg";
-import daunsingkong from "assets/img/examples/daunsingkong.jpg";
-import buncis from "assets/img/examples/buncis.jpg";
-import selada from "assets/img/examples/selada.jpg";
-import bawang from "assets/img/examples/bawang.jpg";
-import kayumanis from "assets/img/examples/kayumanis.jpg";
-import pala from "assets/img/examples/pala.jpg";
-import cengkeh from "assets/img/examples/cengkeh.jpg";
+import alpukat from "assets/img/product/alpukat.jpg";
+import jeruk from "assets/img/product/jeruk.jpg";
+import manggis from "assets/img/product/manggis.jpg";
+import mangga from "assets/img/product/mangga.jpg";
+import sayurkol from "assets/img/product/sayurkol.jpg";
+import daunsingkong from "assets/img/product/daunsingkong.jpg";
+import buncis from "assets/img/product/buncis.jpg";
+import selada from "assets/img/product/selada.jpg";
+import bawang from "assets/img/product/bawang.jpg";
+import kayumanis from "assets/img/product/kayumanis.jpg";
+import pala from "assets/img/product/pala.jpg";
+import cengkeh from "assets/img/product/cengkeh.jpg";
+import kentang from "assets/img/product/kentang.jpg";
+import wortel from "assets/img/product/wortel.jpg";
+import singkong from "assets/img/product/singkong.jpg";
+import ubijalar from "assets/img/product/ubijalar.jpg";
 import studio3 from "assets/img/examples/studio-3.jpg";
 import studio1 from "assets/img/examples/studio-3.jpg";
 import studio4 from "assets/img/examples/studio-4.jpg";
@@ -98,7 +102,22 @@ export default function ProfilePage(props) {
                             />
                             <br/>
                             <Button
-                              href="../detailmanggis"
+                              href="../detailjeruk"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
+                            <img
+                              alt="..."
+                              src={jeruk}
+                              className={navImageClasses}
+                            />
+                          </GridItem>
+                          <GridItem xs={12} sm={12} md={4}>
+                          <Button
+                              href="../detailmangga"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
@@ -108,21 +127,6 @@ export default function ProfilePage(props) {
                             <img
                               alt="..."
                               src={mangga}
-                              className={navImageClasses}
-                            />
-                          </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
-                          <Button
-                              href="../detailmanggis"
-                              color="transparent"
-                              target="_blank"
-                              className={classes.navLink}
-                            >
-                              Detail Produk
-                            </Button>
-                            <img
-                              alt="..."
-                              src={lemon1}
                               className={navImageClasses}
                             />
                             <br/>
@@ -149,28 +153,59 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
+                            <br/>
+                            <Button
+                              href="../detaildaunsingkong"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
                               src={daunsingkong}
                               className={navImageClasses}
                             />
+                            <br/>
+                            <Button
+                              href="../detailselada"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
                               src={selada}
                               className={navImageClasses}
                             />
-                            <img
-                              alt="..."
-                              src={buncis}
-                              className={navImageClasses}
-                            />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
+                          <br/>
+                            <Button
+                              href="../detailbuncis"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
                               src={buncis}
                               className={navImageClasses}
                             />
+                            <br/>
+                            <Button
+                              href="../detailsayurkol"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
                               src={sayurkol}
@@ -186,91 +221,62 @@ export default function ProfilePage(props) {
                         tabContent: (
                           <GridContainer justify="center">
                             <GridItem xs={12} sm={12} md={4}>
+                            <br/>
+                            <Button
+                              href="../detailpala"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                               <img
                                 alt="..."
                                 src={pala}
                                 className={navImageClasses}
                               />
+                              <br/>
+                            <Button
+                              href="../detailcengkeh"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                               <img
                                 alt="..."
                                 src={cengkeh}
                                 className={navImageClasses}
                               />
-                              <img
-                                alt="..."
-                                src={kayumanis}
-                                className={navImageClasses}
-                              />
                             </GridItem>
                             <GridItem xs={12} sm={12} md={4}>
+                            <br/>
+                            <Button
+                              href="../detailbawang"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                               <img
                                 alt="..."
                                 src={bawang}
                                 className={navImageClasses}
                               />
+                            <br/>
+                            <Button
+                              href="../detailkayumanis"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                               <img
                                 alt="..."
-                                src={pala}
-                                className={navImageClasses}
-                              />
-                            </GridItem>
-                          </GridContainer>
-                        )
-                      },
-                      {
-                        tabButton: "Sembako",
-                        tabIcon: Favorite,
-                        tabContent: (
-                          <GridContainer justify="center">
-                            <GridItem xs={12} sm={12} md={4}>
-                              <img
-                                alt="..."
-                                src={work1}
-                                className={navImageClasses}
-                              />
-                              <img
-                                alt="..."
-                                src={studio2}
-                                className={navImageClasses}
-                              />
-                              <img
-                                alt="..."
-                                src={work2}
-                                className={navImageClasses}
-                              />
-                            </GridItem>
-                            <GridItem xs={12} sm={12} md={4}>
-                              <img
-                                alt="..."
-                                src={work4}
-                                className={navImageClasses}
-                              />
-                              <img
-                                alt="..."
-                                src={work3}
-                                className={navImageClasses}
-                              />
-                              <img
-                                alt="..."
-                                src={studio3}
-                                className={navImageClasses}
-                              />
-                            
-                            </GridItem>
-                            <GridItem xs={12} sm={12} md={4}>
-                              <img
-                                alt="..."
-                                src={work1}
-                                className={navImageClasses}
-                              />
-                              <img
-                                alt="..."
-                                src={studio2}
-                                className={navImageClasses}
-                              />
-                              <img
-                                alt="..."
-                                src={work2}
+                                src={kayumanis}
                                 className={navImageClasses}
                               />
                             </GridItem>
@@ -283,33 +289,65 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
+                          <br/>
+                            <Button
+                              href="../detailkentang"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
-                              src={work4}
+                              src={kentang}
                               className={navImageClasses}
                             />
+                            <br/>
+                            <Button
+                              href="../detailwortel"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
-                              src={studio3}
+                              src={wortel}
                               className={navImageClasses}
                             />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
+                          <br/>
+                            <Button
+                              href="../detailsingkong"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
-                              src={work2}
+                              src={singkong}
                               className={navImageClasses}
                             />
+                            <br/>
+                            <Button
+                              href="../detailubijalar"
+                              color="transparent"
+                              target="_blank"
+                              className={classes.navLink}
+                            >
+                              Detail Produk
+                            </Button>
                             <img
                               alt="..."
-                              src={work1}
+                              src={ubijalar}
                               className={navImageClasses}
                             />
-                            <img
-                              alt="..."
-                              src={studio1}
-                              className={navImageClasses}
-                            />
+                            
                           </GridItem>
                           
                         </GridContainer>
