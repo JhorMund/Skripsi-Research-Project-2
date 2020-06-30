@@ -1,6 +1,7 @@
 /*eslint-disable*/
 import React from "react";
 import Link from "next/link";
+import { useSelector } from 'react-redux';
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -27,118 +28,78 @@ import CustomInput from "components/CustomInput/CustomInput.js";
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
+//Dari eccomerce
+
+
 import styles from "assets/jss/nextjs-material-kit/pages/componentsSections/navbarsStyle.js";
 
-
 const useStyles = makeStyles(styles);
+const linkStyle = {
+  marginRight: 15
+};
 
-export default function HeaderLinks(props) {
+export default function HeaderLinks() {
+  const cart = useSelector(state => state.cart.items);
+  const wishlist = useSelector(state => state.wishlist.items);
   const classes = useStyles();
   return (
     
     <List className={classes.list}>
-      <ListItem className={classes.listItem}>
-      <CustomInput
-                  white
-                  inputRootCustomClasses={classes.inputRootCustomClasses}
-                  formControlProps={{
-                    className: classes.formControl
-                  }}
-                  inputProps={{
-                    placeholder: "Search",
-                    inputProps: {
-                      "aria-label": "Search",
-                      className: classes.searchInput
-                    }
-                  }}
-                />
-                <Button justIcon round color="transparent">
-                  <Search className={classes.searchIcon} />
-                </Button>
+        <ListItem className={classes.listItem}>
+        <Button
+        className= {classes.navLink}
+        color="transparent"
+        target="_blank"
+        >
+        <Link href="/">
+            <a style={linkStyle}>Home</a>
+        </Link>
+        </Button>
+        <Button
+        className= {classes.navLink}
+        color="transparent"
+        target="_blank"
+        >
+        <Link href="/cart">
+            <a className={classes.link}>Cart({Object.keys(cart).length})</a>
+        </Link>
+        </Button>
+        <Button
+          className= {classes.navLink}
+          color= "transparent"
+          target="_blank"
+        >
+        <Link href="/wishlist">
+            <a style={linkStyle}>Wishlist({Object.keys(wishlist).length})</a>
+        </Link>
+        </Button>
       </ListItem>
-
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          noLiPadding
-          navDropdown
-          buttonText="Product"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent"
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link href="../allproduct">
-              <a className={classes.dropdownLink}>All Product</a>
+          <CustomDropdown
+            left
+            navDropdown
+            hoverColor="info"
+            dropdownHeader="Dropdown Header"
+            buttonIcon="settings"
+            buttonProps={{
+              className: classes.navLink,
+              color: "transparent"
+            }}
+            dropdownList={[
+              <Link href="/allproduct">
+                <a className={classes.dropdownLink}>All Product</a>
+              </Link>,
+              <Link href="/profile">
+              <a className={classes.dropdownLink}>Profile</a>
             </Link>,
-            <a
-              href="https://creativetimofficial.github.io/nextjs-material-kit/#/documentation?ref=njsmk-navbar"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
-          ]}
-        />
+            <Link href="/login">
+            <a className={classes.dropdownLink}>Login</a>
+          </Link>
+
+            ]}
+          />
       </ListItem>
-      
-      <ListItem className={classes.listItem}>
-        <Button
-          href="../profile"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <Icon className={classes.icons}></Icon> PROFILE
-        </Button>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          href="../login"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <Icon className={classes.icons}></Icon> Login
-        </Button>
-        
-      </ListItem>
-      <ListItem className={classes.listItem}>
-                  <Button
-                    justIcon
-                    round
-                    href="#pablo"
-                    className={classes.notificationNavLink}
-                    onClick={e => e.preventDefault()}
-                    color="transparent"
-                  >
-                    <Email className={classes.icons} />
-                  </Button>
-                </ListItem>
-                <ListItem className={classes.listItem}>
-                    <CustomDropdown
-                      left
-                      navDropdown
-                      hoverColor="info"
-                      dropdownHeader="Dropdown Header"
-                      buttonIcon="settings"
-                      buttonProps={{
-                        className: classes.navLink,
-                        color: "transparent"
-                      }}
-                      dropdownList={[
-                        "Action",
-                        "Another action",
-                        "Something else here",
-                        { divider: true },
-                        "Separated link",
-                        { divider: true },
-                        "One more separated link"
-                      ]}
-                    />
-                  </ListItem>
     </List>
-    
   );
 }
 

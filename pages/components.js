@@ -14,6 +14,8 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import Parallax from "components/Parallax/Parallax.js";
+import Layout from 'components/layout';
+import Products from '../components/products';
 
 import mangga from "assets/img/product/mangga.jpg";
 import cengkeh from "assets/img/product/cengkeh.jpg";
@@ -182,6 +184,9 @@ export default function Components(props) {
             </a>
           </Link>
         </GridItem>
+        <Layout>
+        <Products />
+        </Layout>
       </div>
       
       <Footer />

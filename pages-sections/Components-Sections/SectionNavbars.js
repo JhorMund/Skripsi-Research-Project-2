@@ -221,7 +221,7 @@ export default function SectionNavbars() {
                     onClick={e => e.preventDefault()}
                     color="transparent"
                   >
-                    
+                    Settings
                   </Button>
                 </ListItem>
               </List>

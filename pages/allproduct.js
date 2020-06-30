@@ -35,15 +35,6 @@ import kentang from "assets/img/product/kentang.jpg";
 import wortel from "assets/img/product/wortel.jpg";
 import singkong from "assets/img/product/singkong.jpg";
 import ubijalar from "assets/img/product/ubijalar.jpg";
-import studio3 from "assets/img/examples/studio-3.jpg";
-import studio1 from "assets/img/examples/studio-3.jpg";
-import studio4 from "assets/img/examples/studio-4.jpg";
-import studio2 from "assets/img/examples/studio-5.jpg";
-import work1 from "assets/img/examples/olu-eletu.jpg";
-import work2 from "assets/img/examples/clem-onojeghuo.jpg";
-import work3 from "assets/img/examples/cynthia-del-rio.jpg";
-import work4 from "assets/img/examples/mariya-georgieva.jpg";
-import work5 from "assets/img/examples/clem-onojegaw.jpg";
 
 import styles from "assets/jss/nextjs-material-kit/pages/profilePage.js";
 
