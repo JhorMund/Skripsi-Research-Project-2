@@ -33,29 +33,29 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/?ref=njsmk-footer"
+                href=""
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
+                TaniBisnisShop Team :
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/presentation?ref=njsmk-footer"
+                href=""
                 className={classes.block}
                 target="_blank"
               >
-                About us
+                Vinyati Watuseke
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="http://blog.creative-tim.com/?ref=njsmk-footer"
+                href=""
                 className={classes.block}
                 target="_blank"
               >
-                Blog
+                Marsel Dien
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
@@ -64,7 +64,7 @@ export default function Footer(props) {
                 className={classes.block}
                 target="_blank"
               >
-                Licenses
+                Jhordy Mundung
               </a>
             </ListItem>
           </List>
@@ -73,7 +73,7 @@ export default function Footer(props) {
           &copy; {1900 + new Date().getYear()} , made with{" "}
           <Favorite className={classes.icon} /> by{" "}
           <a
-            href="https://www.creative-tim.com?ref=njsmk-footer"
+            href="www.facebook.com"
             className={aClasses}
             target="_blank"
           >

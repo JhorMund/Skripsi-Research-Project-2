@@ -20,7 +20,7 @@ import Products from '../components/products';
 import mangga from "assets/img/product/mangga.jpg";
 import cengkeh from "assets/img/product/cengkeh.jpg";
 import kol from "assets/img/product/sayurkol.jpg";
-import kayumanis from "assets/img/product/kayumanis.jpg";
+import kayumanis from "assets/img/product/kentang.jpg";
 import manggis from "assets/img/product/manggis.jpg";
 import pala from "assets/img/product/pala.jpg";
 // sections for this page
@@ -121,7 +121,7 @@ export default function Components(props) {
             <br/>
             <td>
             <GridItem xs={12} sm={2} className={classes.marginLeft}>
-              <h4>Kayu_Manis</h4>
+              <h4>Kentang</h4>
               <img
                 src={kayumanis}
                 alt="..."
@@ -175,15 +175,6 @@ export default function Components(props) {
     <div className={classes.space50} />
       <br/><br/><br/>
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <GridItem md={12} className={classes.textCenter}>
-          <Link href="/allproduct">
-            <a className={classes.link}>
-              <Button color="primary" size="lg" simple>
-                View All Product
-              </Button>
-            </a>
-          </Link>
-        </GridItem>
         <Layout>
         <Products />
         </Layout>

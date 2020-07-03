@@ -5,39 +5,39 @@ const initialState = {
     availableProducts: [
         {
             productId: '1',
-            productName: 'Cengkeh',
-            productPrice: 20000,
-            productDescription: 'This gergeous, three-quarter-sized arcade cabinet comes loaded ' +
-                'with some classic Star Wars gaming titles, including A New Hope, ' +
-                'The Empire Strikes Back, and Return of the Jedi.',
+            productName: 'Mangga',
+            productPrice: 5000,
+            productDescription: 'Buah mangga ini dijual Rp.5000/Bh, ' +
+                'berasal dari modoinding, ' +
+                'tersedia beberapa macam buah mangga ' + 'dan untuk gambar hanya ilustrasi, untuk info lebih lengkap hubungi 081244xxxxxx.',
             productImage: 'cengkeh.jpg',
-            productCategory: 'Rempah'
-        },
-        {
-            productId: '4',
-            productName: 'Cengkeh',
-            productPrice: 20000,
-            productDescription: 'This gergeous, three-quarter-sized arcade cabinet comes loaded ' +
-                'with some classic Star Wars gaming titles, including A New Hope, ' +
-                'The Empire Strikes Back, and Return of the Jedi.',
-            productImage: 'cengkeh.jpg',
-            productCategory: 'Rempah'
+            productCategory: 'Buah'
         },
         {
             productId: '2',
-            productName: 'Kentang',
+            productName: 'Cengkeh',
+            productPrice: 20000,
+            productDescription: 'Cengkeh ini dijual Rp.20000/kg. ' + 'berasal dari Bolaang Mongondow Timur, ' +
+                'dan untuk gambar hanyalah ilustrasi, ' +
+                'untuk info lebih lengkap hubungi 081244xxxxxx.',
+            productImage: 'cengkeh.jpg',
+            productCategory: 'Rempah'
+        },
+        {
+            productId: '3',
+            productName: 'Kol',
             productPrice: 15000,
-            productDescription: 'For battling womp rats and tie fighters, and because you can\'t spell \"Poe Dameron\" without \"drone.\"',
+            productDescription: 'Sayur Kol segar dari modoinding, di jual 2000/bh dan minimal pemesanan 20 bh.',
             productImage: 'kentang.jpg',
             productCategory: 'Umbian'
         },
         {
-            productId: '3',
-            productName: 'Alpukat',
-            productPrice: 25000,
-            productDescription: 'If you want to show your love for the movie every day.',
-            productImage: 'alpukat.jpg',
-            productCategory: 'Buah'
+            productId: '4',
+            productName: 'Kol',
+            productPrice: 2000,
+            productDescription: 'Sayur Kol segar dari modoinding, di jual 2000/bh dan minimal pemesanan 20 bh.',
+            productImage: 'sayurkol.jpg',
+            productCategory: 'Sayur'
         }
     ],
     searchProducts: '',

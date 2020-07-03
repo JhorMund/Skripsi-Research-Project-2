@@ -52,7 +52,7 @@ export default function HeaderLinks() {
         target="_blank"
         >
         <Link href="/">
-            <a style={linkStyle}>Home</a>
+            <a style={classes.link}>Home</a>
         </Link>
         </Button>
         <Button
@@ -70,7 +70,7 @@ export default function HeaderLinks() {
           target="_blank"
         >
         <Link href="/wishlist">
-            <a style={linkStyle}>Wishlist({Object.keys(wishlist).length})</a>
+            <a style={classes.link}>Wishlist({Object.keys(wishlist).length})</a>
         </Link>
         </Button>
       </ListItem>

@@ -23,9 +23,10 @@ const Products = () => {
                 <> Filter by Category: </>
                 <select onChange={e => { dispatch(productActions.filterByCategory(e.target.value)) }}>
                     <option value="">All</option>
-                    <option value="Games">Games</option>
-                    <option value="Toys">Toys</option>
-                    <option value="Accecories">Accecories</option>
+                    <option value="Buah">Buah</option>
+                    <option value="Rempah">Rempah</option>
+                    <option value="Umbian">Umbian</option>
+                    <option value="Sayur">Sayur</option>
                 </select>
             </div>
             {

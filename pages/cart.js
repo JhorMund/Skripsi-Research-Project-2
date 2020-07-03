@@ -13,9 +13,6 @@ const CartItem = ({ id, name, price, quantity, sum }) => {
 
     return (
         <div>
-            <p>
-                <HeaderLinks/>
-            </p>
             <h4>{name}</h4>
             <p>Price : <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'Rp. '} /></p>
             <p>Quantity: {quantity}</p>
