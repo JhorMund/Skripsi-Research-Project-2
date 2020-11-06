@@ -16,9 +16,6 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
-
-import profile from "assets/img/faces/vinyati.jpg";
-
 import alpukat from "assets/img/product/alpukat.jpg";
 import jeruk from "assets/img/product/jeruk.jpg";
 import manggis from "assets/img/product/manggis.jpg";
