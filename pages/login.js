@@ -34,13 +34,7 @@ export default function LoginPage(props) {
   const { ...rest } = props;
   return (
     <div>
-      <Header
-        absolute
-        color="transparent"
-        brand="TaniBisnisShop"
-        rightLinks={<HeaderLinks />}
-        {...rest}
-      />
+      
       <div
         className={classes.pageHeader}
         style={{
@@ -139,7 +133,7 @@ export default function LoginPage(props) {
                   </CardBody>
                   <CardFooter className={classes.cardFooter}>
                     <Button simple color="primary" size="lg">
-                      Get started
+                      Log In
                     </Button>
                   </CardFooter>
                 </form>

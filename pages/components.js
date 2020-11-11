@@ -64,7 +64,7 @@ export default function Components(props) {
               <div className={classes.brand}>
                 <h1 className={classes.title}>Welcome to TaniBisnisShop</h1>
                 <h3 className={classes.subtitle}>
-                  TaniBisnisShop is a research project in the last smester of computer science to me and my partner.
+                  TaniBisnisShop is a research project in the last semester of computer science to me and my partner.
                 </h3>
               </div>
             </GridItem>
@@ -88,7 +88,6 @@ export default function Components(props) {
                 alt="..."
                 className={classes.imgRounded + " " + classes.imgFluid}
               />
-              
             </GridItem>
             </td>
             <br/>

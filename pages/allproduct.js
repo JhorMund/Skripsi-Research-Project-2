@@ -1,8 +1,12 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+// react components for routing our app without refresh
+import Link from "next/link";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from '@material-ui/core/Typography';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 // @material-ui/icons
 import Camera from "@material-ui/icons/Camera";
 import Palette from "@material-ui/icons/Palette";
@@ -16,6 +20,9 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
+
+import profile from "assets/img/faces/vinyati.jpg";
+
 import alpukat from "assets/img/product/alpukat.jpg";
 import jeruk from "assets/img/product/jeruk.jpg";
 import manggis from "assets/img/product/manggis.jpg";
@@ -45,6 +52,10 @@ export default function ProfilePage(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
+  function handleClick(event) {
+    event.preventDefault();
+    console.info('You clicked a breadcrumb.');
+  }
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
@@ -62,6 +73,13 @@ export default function ProfilePage(props) {
       <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
+        <br/>
+        <Breadcrumbs aria-label="breadcrumb">
+          <Link href="/">
+            Home
+          </Link>
+          <Typography color="textPrimary">Detail Product</Typography>
+        </Breadcrumbs> 
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={12} md={10} className={classes.navWrapper}>
@@ -75,28 +93,28 @@ export default function ProfilePage(props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
-                          <Button
+                          <Link
                               href="../detailalpukat"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Alpukat
+                            </Link>
                             <img
                               alt="..."
                               src={alpukat}
                               className={navImageClasses}
                             />
                             <br/>
-                            <Button
+                            <Link
                               href="../detailjeruk"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Jeruk
+                            </Link>
                             <img
                               alt="..."
                               src={jeruk}
@@ -104,28 +122,28 @@ export default function ProfilePage(props) {
                             />
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
-                          <Button
+                          <Link
                               href="../detailmangga"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Mangga
+                            </Link>
                             <img
                               alt="..."
                               src={mangga}
                               className={navImageClasses}
                             />
                             <br/>
-                            <Button
+                            <Link
                               href="../detailmanggis"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Manggis
+                            </Link>
                             <img
                               alt="..."
                               src={manggis}
@@ -142,28 +160,28 @@ export default function ProfilePage(props) {
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
                             <br/>
-                            <Button
+                            <Link
                               href="../detaildaunsingkong"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Daun Singkong
+                            </Link>
                             <img
                               alt="..."
                               src={daunsingkong}
                               className={navImageClasses}
                             />
                             <br/>
-                            <Button
+                            <Link
                               href="../detailselada"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Selada
+                            </Link>
                             <img
                               alt="..."
                               src={selada}
@@ -172,28 +190,28 @@ export default function ProfilePage(props) {
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
                           <br/>
-                            <Button
+                            <Link
                               href="../detailbuncis"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Buncis
+                            </Link>
                             <img
                               alt="..."
                               src={buncis}
                               className={navImageClasses}
                             />
                             <br/>
-                            <Button
+                            <Link
                               href="../detailsayurkol"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Sayur Kol
+                            </Link>
                             <img
                               alt="..."
                               src={sayurkol}
@@ -210,28 +228,28 @@ export default function ProfilePage(props) {
                           <GridContainer justify="center">
                             <GridItem xs={12} sm={12} md={4}>
                             <br/>
-                            <Button
+                            <Link
                               href="../detailpala"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Pala
+                            </Link>
                               <img
                                 alt="..."
                                 src={pala}
                                 className={navImageClasses}
                               />
                               <br/>
-                            <Button
+                            <Link
                               href="../detailcengkeh"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Cengkeh
+                            </Link>
                               <img
                                 alt="..."
                                 src={cengkeh}
@@ -240,28 +258,28 @@ export default function ProfilePage(props) {
                             </GridItem>
                             <GridItem xs={12} sm={12} md={4}>
                             <br/>
-                            <Button
+                            <Link
                               href="../detailbawang"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Bawang
+                            </Link>
                               <img
                                 alt="..."
                                 src={bawang}
                                 className={navImageClasses}
                               />
                             <br/>
-                            <Button
+                            <Link
                               href="../detailkayumanis"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Kayu Manis
+                            </Link>
                               <img
                                 alt="..."
                                 src={kayumanis}
@@ -278,28 +296,28 @@ export default function ProfilePage(props) {
                         <GridContainer justify="center">
                           <GridItem xs={12} sm={12} md={4}>
                           <br/>
-                            <Button
+                            <Link
                               href="../detailkentang"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Kentang
+                            </Link>
                             <img
                               alt="..."
                               src={kentang}
                               className={navImageClasses}
                             />
                             <br/>
-                            <Button
+                            <Link
                               href="../detailwortel"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Wortel
+                            </Link>
                             <img
                               alt="..."
                               src={wortel}
@@ -308,28 +326,28 @@ export default function ProfilePage(props) {
                           </GridItem>
                           <GridItem xs={12} sm={12} md={4}>
                           <br/>
-                            <Button
+                            <Link
                               href="../detailsingkong"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Singkong
+                            </Link>
                             <img
                               alt="..."
                               src={singkong}
                               className={navImageClasses}
                             />
                             <br/>
-                            <Button
+                            <Link
                               href="../detailubijalar"
                               color="transparent"
                               target="_blank"
                               className={classes.navLink}
                             >
-                              Detail Produk
-                            </Button>
+                              Detail Ubi Jalar
+                            </Link>
                             <img
                               alt="..."
                               src={ubijalar}

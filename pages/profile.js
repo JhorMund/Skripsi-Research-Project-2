@@ -18,6 +18,8 @@ import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import profile from "assets/img/faces/vinyati.jpg";
+import profile2 from "assets/img/faces/marsle.jpg";
+import profile3 from "assets/img/faces/jhordy.jpg";
 
 import studio1 from "assets/img/examples/studio-1.jpg";
 import studio2 from "assets/img/examples/studio-2.jpg";
@@ -29,7 +31,6 @@ import work2 from "assets/img/examples/clem-onojeghuo.jpg";
 import work3 from "assets/img/examples/cynthia-del-rio.jpg";
 import work4 from "assets/img/examples/mariya-georgieva.jpg";
 import work5 from "assets/img/examples/clem-onojegaw.jpg";
-
 import styles from "assets/jss/nextjs-material-kit/pages/profilePage.js";
 
 const useStyles = makeStyles(styles);
@@ -59,9 +60,32 @@ export default function ProfilePage(props) {
       <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
+
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem xs={12} sm={12} md={4}>
+                <div className={classes.profile}>
+                  <div>
+                    <img src={profile2} alt="..." className={imageClasses} />
+                  </div>
+                  <div className={classes.name}>
+                    <br/><br/><br/>
+                    <h3 className={classes.title}>Dien Marsel</h3>
+                    <h6>Mahasiswa Fakultas Ilmu Komputer Jurusan Teknik Informatika di Universitas Klabat </h6>
+                    <Button href="https://web.facebook.com/marsel.dien/" justIcon link className={classes.margin5}>
+                      <i className={"fab fa-facebook"} />
+                    </Button>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-instagram"} />
+                    </Button>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-twitter"} />
+                    </Button>
+                  </div>
+                </div>
+              </GridItem>
+
+              <GridItem xs={12} sm={12} md={4}>
                 <div className={classes.profile}>
                   <div>
                     <img src={profile} alt="..." className={imageClasses} />
@@ -81,6 +105,28 @@ export default function ProfilePage(props) {
                   </div>
                 </div>
               </GridItem>
+
+              <GridItem xs={12} sm={12} md={4}>
+                <div className={classes.profile}>
+                  <div>
+                    <img src={profile3} alt="..." className={imageClasses} />
+                  </div>
+                  <div className={classes.name}>
+                    <h3 className={classes.title}>Mundung Jhordy</h3>
+                    <h6>Mahasiswa Fakultas Ilmu Komputer Jurusan Teknik Informatika di Universitas Klabat </h6>
+                    <Button href="https://web.facebook.com/profile.php?id=100011584490217" justIcon link className={classes.margin5}>
+                      <i className={"fab fa-facebook"} />
+                    </Button>
+                    <Button href="https://www.instagram.com/jhordy_mundung/"justIcon link className={classes.margin5}>
+                      <i className={"fab fa-instagram"} />
+                    </Button>
+                    <Button justIcon link className={classes.margin5}>
+                      <i className={"fab fa-twitter"} />
+                    </Button>
+                  </div>
+                </div>
+              </GridItem>
+
             </GridContainer>
           </div>
         </div>

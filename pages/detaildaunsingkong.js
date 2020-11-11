@@ -3,6 +3,9 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import Typography from '@material-ui/core/Typography';
+import Breadcrumbs from '@material-ui/core/Breadcrumbs';
+import Link from '@material-ui/core/Link';
 // @material-ui/icons
 import Camera from "@material-ui/icons/Camera";
 import Palette from "@material-ui/icons/Palette";
@@ -16,10 +19,7 @@ import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
-
-import daunsingkong from "assets/img/product/daunsingkong.jpg";
-
-
+import daunsingkong from "assets/img/product/daun-singkong.jpg";
 import styles from "assets/jss/nextjs-material-kit/pages/profilePage.js";
 
 const useStyles = makeStyles(styles);
@@ -32,6 +32,10 @@ export default function ProfilePage(props) {
     classes.imgRoundedCircle,
     classes.imgFluid
   );
+  function handleClick(event) {
+    event.preventDefault();
+    console.info('You clicked a breadcrumb.');
+  }
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
@@ -49,16 +53,30 @@ export default function ProfilePage(props) {
       <Parallax small filter image={require("assets/img/profile-bg.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
+        <br/>
+        <Breadcrumbs aria-label="breadcrumb">
+        <Link href="/">
+            Home
+          </Link>
+          <Link href="/allproduct">
+            Detail Produk
+          </Link>
+          <Typography color="textPrimary">Daun Singkong</Typography>
+        </Breadcrumbs> 
           <div className={classes.container}>
-            <GridContainer justify="center">
+            <GridContainer justify="left">
               <GridItem xs={12} sm={12} md={6}>
                 <div className={classes.daunsingkong}>
                   <div>
                     <br/>
                     <img src={daunsingkong} alt="..." className={classes.imgRounded + " " + classes.imgFluid} />
-                    
                   </div>
-                  <br/><br/><br/>
+                  <br/><br/>
+                </div>
+              </GridItem>
+
+              <GridItem xs={12} sm={12} md={6}>
+              <br/><br/><br/>
                   <div className={classes.name}>
                     <h3 className={classes.title}>Daun Singkong</h3>
                     <h6>
@@ -67,17 +85,9 @@ export default function ProfilePage(props) {
                       Rp.20.000/kg<br/>
                       min. 1kg
                     </h6>
-                    <Button
-                      color="Danger"
-                      href="../detailmangga"
-                      color="transparent"
-                      target="_blank"
-                      className={classes.navLink}
-                    >
-                      Tambah
-                  </Button>
+                    <button onClick={() => { dispatch(wishListActions.addToWishList(product[id - 1])) }}>Add To Wishlist</button>
+                    <button onClick={() => { dispatch(cartActions.addToCart(product[id - 1])) }}>Add To Cart</button>
                   </div>
-                </div>
               </GridItem>
             </GridContainer>            
           </div>
