@@ -57,7 +57,7 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("assets/img/bg2.jpg")}>
+      <Parallax small filter image={require("assets/img/sayur.jpg")}>
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
