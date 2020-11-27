@@ -5,37 +5,133 @@ const initialState = {
     availableProducts: [
         {
             productId: '1',
-            productName: 'Mangga',
+            productName: 'Alpukat',
             productPrice: 5000,
-            productDescription: 'Buah mangga ini dijual Rp.5000/Bh, ' +
-                'berasal dari modoinding, ' +
-                'tersedia beberapa macam buah mangga ' + 'dan untuk gambar hanya ilustrasi, untuk info lebih lengkap hubungi 081244xxxxxx.',
-            productImage: 'cengkeh.jpg',
+            productDescription: 'Buah Alpukat segar dari modoinding, di jual 5000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'alpukat.jpg',
             productCategory: 'Buah'
         },
         {
             productId: '2',
+            productName: 'Mangga',
+            productPrice: 5000,
+            productDescription: 'Buah Mangga segar dari modoinding, di jual 5000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'mangga.jpg',
+            productCategory: 'Buah'
+        },
+        {
+            productId: '3',
+            productName: 'Manggis',
+            productPrice: 5000,
+            productDescription: 'Buah Manggis segar dari modoinding, di jual 5000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'manggis.jpg',
+            productCategory: 'Buah'
+        },
+        {
+            productId: '4',
+            productName: 'Jeruk',
+            productPrice: 5000,
+            productDescription: 'Buah Jeruk segar dari modoinding, di jual 5000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'jeruk.jpg',
+            productCategory: 'Buah'
+        },
+
+        {
+            productId: '5',
+            productName: 'Pala',
+            productPrice: 20000,
+            productDescription: 'Pala segar dari modoinding, di jual 20000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'pala.jpg',
+            productCategory: 'Rempah'
+        },
+        {
+            productId: '6',
+            productName: 'Bawang',
+            productPrice: 20000,
+            productDescription: 'Bawang segar dari modoinding, di jual 20000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'bawang.jpg',
+            productCategory: 'Rempah'
+        },
+        {
+            productId: '7',
             productName: 'Cengkeh',
             productPrice: 20000,
-            productDescription: 'Cengkeh ini dijual Rp.20000/kg. ' + 'berasal dari Bolaang Mongondow Timur, ' +
-                'dan untuk gambar hanyalah ilustrasi, ' +
-                'untuk info lebih lengkap hubungi 081244xxxxxx.',
+            productDescription: 'Cengkeh segar dari modoinding, di jual 20000/Kg dan minimal pemesanan 1 Kg.',
             productImage: 'cengkeh.jpg',
             productCategory: 'Rempah'
         },
         {
-            productId: '3',
-            productName: 'Kol',
+            productId: '8',
+            productName: 'Kayu manis',
+            productPrice: 20000,
+            productDescription: 'Kayu manis segar dari modoinding, di jual 20000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'kayumanis.jpg',
+            productCategory: 'Rempah'
+        },
+
+
+        {
+            productId: '9',
+            productName: 'Kentang',
             productPrice: 15000,
-            productDescription: 'Sayur Kol segar dari modoinding, di jual 2000/bh dan minimal pemesanan 20 bh.',
+            productDescription: 'Kentang segar dari modoinding, di jual 15000/Kg dan minimal pemesanan 1 Kg.',
             productImage: 'kentang.jpg',
             productCategory: 'Umbian'
         },
         {
-            productId: '4',
+            productId: '10',
+            productName: 'Singkong',
+            productPrice: 15000,
+            productDescription: 'Singkong segar dari modoinding, di jual 15000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'singkong.jpg',
+            productCategory: 'Umbian'
+        },
+        {
+            productId: '11',
+            productName: 'Wortel',
+            productPrice: 15000,
+            productDescription: 'Wortel segar dari modoinding, di jual 15000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'wortel.jpg',
+            productCategory: 'Umbian'
+        },
+        {
+            productId: '12',
+            productName: 'Ubi jalar',
+            productPrice: 15000,
+            productDescription: 'Ubi jalar segar dari modoinding, di jual 15000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'ubijalar.jpg',
+            productCategory: 'Umbian'
+        },
+
+        {
+            productId: '13',
+            productName: 'Daun sigkong',
+            productPrice: 2000,
+            productDescription: 'Daun singkong segar dari modoinding, di jual 2000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'daunsingkong.jpg',
+            productCategory: 'Sayur'
+        },
+        {
+            productId: '14',
+            productName: 'Buncis',
+            productPrice: 2000,
+            productDescription: 'Buncis segar dari modoinding, di jual 2000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'buncis.jpg',
+            productCategory: 'Sayur'
+        },
+        {
+            productId: '15',
+            productName: 'Selada',
+            productPrice: 2000,
+            productDescription: 'Salada segar dari modoinding, di jual 2000/Kg dan minimal pemesanan 1 Kg.',
+            productImage: 'selada.jpg',
+            productCategory: 'Sayur'
+        },
+        {
+            productId: '16',
             productName: 'Kol',
             productPrice: 2000,
-            productDescription: 'Sayur Kol segar dari modoinding, di jual 2000/bh dan minimal pemesanan 20 bh.',
+            productDescription: 'Sayur kol segar dari modoinding, di jual 2000/Kg dan minimal pemesanan 1 Kg.',
             productImage: 'sayurkol.jpg',
             productCategory: 'Sayur'
         }

@@ -70,14 +70,11 @@ export default function ProfilePage(props) {
         }}
         {...rest}
       />
-      <Parallax small filter image={require("assets/img/rempah.jpg")} />
+      <Parallax small filter image={require("assets/img/sayur.jpg")} />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
         <br/>
         <Breadcrumbs aria-label="breadcrumb">
-          <Link href="/">
-            Home
-          </Link>
           <Typography color="textPrimary">Detail Product</Typography>
         </Breadcrumbs> 
           <div className={classes.container}>

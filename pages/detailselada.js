@@ -6,18 +6,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from '@material-ui/core/Typography';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Link from '@material-ui/core/Link';
-// @material-ui/icons
-import Camera from "@material-ui/icons/Camera";
-import Palette from "@material-ui/icons/Palette";
-import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
-import Button from "components/CustomButtons/Button.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import NavPills from "components/NavPills/NavPills.js";
 import Parallax from "components/Parallax/Parallax.js";
 import selada from "assets/img/product/selada1.jpg";
 import styles from "assets/jss/nextjs-material-kit/pages/profilePage.js";
@@ -55,9 +49,6 @@ export default function ProfilePage(props) {
         <div>
         <br/>
         <Breadcrumbs aria-label="breadcrumb">
-          <Link href="/">
-            Home
-          </Link>
           <Link href="/allproduct">
             Detail Produk
           </Link>
@@ -85,8 +76,6 @@ export default function ProfilePage(props) {
                       Rp.20.000/kg<br/>
                       min. 1kg
                     </h6>
-                    <button onClick={() => { dispatch(wishListActions.addToWishList(product[id - 1])) }}>Add To Wishlist</button>
-                    <button onClick={() => { dispatch(cartActions.addToCart(product[id - 1])) }}>Add To Cart</button>
                   </div>
               </GridItem>
             </GridContainer>            

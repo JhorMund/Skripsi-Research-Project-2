@@ -1,3 +1,4 @@
+import { colors } from '@material-ui/core';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 
@@ -11,7 +12,7 @@ const Header = () => {
 
     return (
         <div>
-            <Link href="/">
+            <Link  href="/">
                 <a style={linkStyle}>Home</a>
             </Link>
             <Link href="/cart">
