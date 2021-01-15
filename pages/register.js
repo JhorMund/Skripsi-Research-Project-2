@@ -31,10 +31,12 @@ class Register extends Component{
         const res = await this.props.registerAPI({email, password}).catch(err => err);
         if(res){
             alert("SUCCESS...")
+        }else {
             this.setState({
                 email: '',
                 password: ''
             })
+
         }
     }
 
@@ -50,7 +52,7 @@ class Register extends Component{
                         <p className="auth-title">Register Page</p>
                         <input className="input" id="email" placeholder="Email" type="text" onChange={this.handleChangeText} value={this.state.email} />
                         <input className="input" id="password" placeholder="Password" type="Password" onChange={this.handleChangeText} value={this.state.password} />
-                        <Button className="btn" onClick={this.handleRegisterSubmit} title="Register" loading={this.props.isLoading} />
+                        <Button className="btn" onClick={this.handleRegisterSubmit} title="Register" loading={this.props.isLoading}  href="/login"><Link href="/login"></Link></Button>
                         <p className="auth-titlee"><Link href="/login" >Back To Login</Link></p>
                     </div>
                 </div> 

@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <div>
-            <Link  href="/">
+            <Link  href="/componensts">
                 <a style={linkStyle}>Home</a>
             </Link>
             <Link href="/cart">

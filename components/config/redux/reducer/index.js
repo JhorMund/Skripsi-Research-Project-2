@@ -1,9 +1,8 @@
 const initialState ={
     popup: false,
     isLogin: false,
-    isLoading: false,
-    user: {},
-    notes: []
+    isLoading: true,
+    user: {}
 }
 const reducer =(state=initialState, action) => {
     if(action.type ==='CHANGE_ISLOGIN'){

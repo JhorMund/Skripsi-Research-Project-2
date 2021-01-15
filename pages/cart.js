@@ -7,18 +7,20 @@ import * as cartActions from "../store/actions/cart";
 import CurrencyFormat from 'react-currency-format';
 import HeaderLinks from '../components/Header/HeaderLinks';
 
-const CartItem = ({ id, name, price, quantity, sum }) => {
+const CartItem = ({ id, name, price, quantity, sum, image }) => {
     const dispatch = useDispatch();
     const product = useSelector(state => state.products.availableProducts);
 
     return (
         <div>
             <h4>{name}</h4>
+            <img src={image} />
             <p>Price : <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'Rp. '} /></p>
             <p>Quantity: {quantity}</p>
             <p>SubTotal: <CurrencyFormat value={sum} displayType={'text'} thousandSeparator={true} prefix={'Rp. '} /></p>
             <button onClick={() => { dispatch(cartActions.addToCart(product[id - 1])) }}>Add Quantity</button>
             <button onClick={() => { dispatch(cartActions.removeFromCart(id)) }}>Remove This Item</button>
+            <button>Order</button>
         </div>
     )
 }
@@ -32,7 +34,8 @@ const Cart = () => {
                 productName: state.cart.items[key].productName,
                 productPrice: state.cart.items[key].productPrice,
                 quantity: state.cart.items[key].quantity,
-                sum: state.cart.items[key].sum
+                sum: state.cart.items[key].sum,
+                productImage: state.cart.items[key].productImage
             });
         }
         return transformedCartItems;
@@ -54,6 +57,7 @@ const Cart = () => {
                             price={item.productPrice}
                             quantity={item.quantity}
                             sum={item.sum}
+                            image={item.productImage}
                         />
                     )
             }
