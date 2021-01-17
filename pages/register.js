@@ -7,8 +7,10 @@ import styles from "assets/jss/nextjs-material-kit/pages/loginPage.js";
 import image from "assets/img/bg7.jpg";
 import Link from 'next/link';
 import Button from '../components/atom/Button';
+import Routerr from "next/router";
 import { registerUserAPI } from '../components/config/redux/action';
 import { connect } from 'react-redux';
+import { Router } from '@material-ui/icons';
 
 const useStyles = makeStyles(styles);
 
@@ -52,7 +54,7 @@ class Register extends Component{
                         <p className="auth-title">Register Page</p>
                         <input className="input" id="email" placeholder="Email" type="text" onChange={this.handleChangeText} value={this.state.email} />
                         <input className="input" id="password" placeholder="Password" type="Password" onChange={this.handleChangeText} value={this.state.password} />
-                        <Button className="btn" onClick={this.handleRegisterSubmit} title="Register" loading={this.props.isLoading}  href="/login"><Link href="/login"></Link></Button>
+                        <Button className="btn" onClick={this.handleRegisterSubmit} title="Register" loading={this.props.isLoading} />
                         <p className="auth-titlee"><Link href="/login" >Back To Login</Link></p>
                     </div>
                 </div> 

@@ -51,7 +51,7 @@ export default function HeaderLinks() {
         color="transparent"
         target="_blank"
         >
-        <Link href="/">
+        <Link href="/components">
             <a style={classes.link}>Home</a>
         </Link>
         </Button>
