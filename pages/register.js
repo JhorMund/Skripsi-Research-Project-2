@@ -17,6 +17,8 @@ const useStyles = makeStyles(styles);
 class Register extends Component{
 
     state ={
+      name: '',
+      alamat: '',
       email: '',
       password: ''
     }
@@ -27,16 +29,18 @@ class Register extends Component{
         });
     }
     handleRegisterSubmit = async () => {
-        const {email, password} = this.state;
-        this.props.registerAPI({email, password})
-        console.log('data before send: ',email, password)
-        const res = await this.props.registerAPI({email, password}).catch(err => err);
+        const {name, alamat, email, password} = this.state;
+        this.props.registerAPI({name, alamat, email, password})
+        console.log('data before send: ',name, alamat, email, password)
+        const res = await this.props.registerAPI({name, alamat, email, password}).catch(err => err);
         if(res){
             alert("SUCCESS...")
         }else {
             this.setState({
+                name: '',
+                alamat: '',
                 email: '',
-                password: ''
+                password: '',
             })
 
         }
@@ -52,6 +56,8 @@ class Register extends Component{
                 <div className="auth-container">
                     <div className="auth-card">
                         <p className="auth-title">Register Page</p>
+                        <input className="input" id="name" placeholder="Username" type="text" onChange={this.handleChangeText} value={this.state.name} />
+                        <input className="input" id="alamat" placeholder="Alamat" type="text" onChange={this.handleChangeText} value={this.state.alamat} />
                         <input className="input" id="email" placeholder="Email" type="text" onChange={this.handleChangeText} value={this.state.email} />
                         <input className="input" id="password" placeholder="Password" type="Password" onChange={this.handleChangeText} value={this.state.password} />
                         <Button className="btn" onClick={this.handleRegisterSubmit} title="Register" loading={this.props.isLoading} />

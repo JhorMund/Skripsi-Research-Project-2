@@ -2,7 +2,7 @@ const initialState ={
     popup: false,
     isLogin: false,
     isLoading: true,
-    user: {}
+    user: {},
 }
 const reducer =(state=initialState, action) => {
     if(action.type ==='CHANGE_ISLOGIN'){

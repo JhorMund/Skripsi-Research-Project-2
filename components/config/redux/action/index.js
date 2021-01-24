@@ -1,3 +1,6 @@
+import { useRadioGroup } from '@material-ui/core';
+import { keys } from '@material-ui/core/styles/createBreakpoints';
+import { database } from '../../../../../Project/src/config/firebase';
 import firebase from '../../firebase';
 
 export const actionUserName = () => (dispatch) => {
@@ -11,10 +14,17 @@ export const registerUserAPI = (data) => (dispatch) => {
     dispatch({type: 'CHANGE_LOADING', value: true})
         firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
         .then(res => {
+            firebase.database().ref('users/'+ data.name ).push({
+                username: data.name,
+                email: data.email,
+                alamat: data.alamat,
+                date: new Date().getTime()
+                
+            })
             alert("SUCCESS...")
             console.log('success: ', res)
             dispatch({type: 'CHANGE_LOADING', value: false})
-            resolve(true)
+            resolve(data)
         })
         .catch(function(error) {
             const errorCode = error.code;
@@ -23,9 +33,9 @@ export const registerUserAPI = (data) => (dispatch) => {
             dispatch({type: 'CHANGE_LOADING', value: false})
             reject(false)
         })
-        
     })
 }
+
 
 export const loginUserAPI = (data) => (dispatch) => {
 
