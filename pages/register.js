@@ -7,10 +7,8 @@ import styles from "assets/jss/nextjs-material-kit/pages/loginPage.js";
 import image from "assets/img/bg7.jpg";
 import Link from 'next/link';
 import Button from '../components/atom/Button';
-import Routerr from "next/router";
 import { registerUserAPI } from '../components/config/redux/action';
 import { connect } from 'react-redux';
-import { Router } from '@material-ui/icons';
 
 const useStyles = makeStyles(styles);
 
@@ -42,7 +40,6 @@ class Register extends Component{
                 email: '',
                 password: '',
             })
-
         }
     }
 

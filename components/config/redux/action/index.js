@@ -14,7 +14,8 @@ export const registerUserAPI = (data) => (dispatch) => {
     dispatch({type: 'CHANGE_LOADING', value: true})
         firebase.auth().createUserWithEmailAndPassword(data.email, data.password)
         .then(res => {
-            firebase.database().ref('users/'+ data.name ).push({
+            const userId = firebase.auth().currentUser.uid
+            firebase.database().ref('users/' + userId).push({
                 username: data.name,
                 email: data.email,
                 alamat: data.alamat,

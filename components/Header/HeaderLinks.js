@@ -19,7 +19,6 @@ import Explore from "@material-ui/icons/Explore";
 import { Apps, CloudDownload } from "@material-ui/icons";
 import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
-
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -27,10 +26,7 @@ import Header from "components/Header/Header.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
-
 //Dari eccomerce
-
-
 import styles from "assets/jss/nextjs-material-kit/pages/componentsSections/navbarsStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -73,6 +69,7 @@ export default function HeaderLinks() {
             <a style={classes.link}>Wishlist({Object.keys(wishlist).length})</a>
         </Link>
         </Button>
+
       </ListItem>
       <ListItem className={classes.listItem}>
           <CustomDropdown

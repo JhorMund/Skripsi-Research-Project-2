@@ -6,10 +6,22 @@ import * as cartActions from "../store/actions/cart";
 
 import CurrencyFormat from 'react-currency-format';
 import HeaderLinks from '../components/Header/HeaderLinks';
+import firebase from '../components/config/firebase';
+import { Description } from '@material-ui/icons';
+
+
+const userId = firebase.auth().currentUser.uid
+console.log("data firebase ", firebase);
 
 const CartItem = ({ id, name, price, quantity, sum, image }) => {
     const dispatch = useDispatch();
     const product = useSelector(state => state.products.availableProducts);
+    firebase.database().ref('Order/' + userId).set({
+        productName: name,
+        productPrice: price,
+        quantity: quantity,
+        total: sum
+    });
 
     return (
         <div>
@@ -34,8 +46,7 @@ const Cart = () => {
                 productName: state.cart.items[key].productName,
                 productPrice: state.cart.items[key].productPrice,
                 quantity: state.cart.items[key].quantity,
-                sum: state.cart.items[key].sum,
-                productImage: state.cart.items[key].productImage
+                sum: state.cart.items[key].sum
             });
         }
         return transformedCartItems;
@@ -49,7 +60,7 @@ const Cart = () => {
             {
                 totalAmount === 0
                     ? <h2>Your Cart is Empty</h2>
-                    : cartItems.map(item =>
+                    : cartItems.map(item => 
                         <CartItem
                             key={item.productId}
                             id={item.productId}
@@ -61,12 +72,15 @@ const Cart = () => {
                         />
                     )
             }
+            
             {
                 totalAmount !== 0 &&
                 <h2>Grand Total: <CurrencyFormat value={totalAmount} displayType={'text'} thousandSeparator={true} prefix={'Rp. '} /> </h2>
             }
         </Layout>
+        
     )
+
 }
 
 export default Cart;

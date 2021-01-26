@@ -1,6 +1,9 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/cart";
+import { ADD_TO_CART, ADD_TO_ORDER, REMOVE_FROM_CART, REMOVE_FROM_ORDER } from "../actions/cart";
+import firebase, {database} from '../../components/config/firebase';
 
 import { createReducer } from '@reduxjs/toolkit';
+import { Description } from "@material-ui/icons";
+
 
 const initialState = {
     items: {},
@@ -50,6 +53,7 @@ const cartReducer = createReducer(initialState, {
             totalAmount: state.totalAmount + productPrice
         };
     },
+
     [REMOVE_FROM_CART]: (state, action) => {
         const {
             productId,
@@ -86,7 +90,7 @@ const cartReducer = createReducer(initialState, {
             items: updatedCartItems,
             totalAmount: state.totalAmount - productPrice
         };
-    }
+    },
 })
 
 export default cartReducer;
