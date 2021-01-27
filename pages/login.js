@@ -32,16 +32,19 @@ class Login extends Component{
         const {history} = this.props;
         const res = await this.props.loginAPI({email, password}).catch(err => err);
         if(res){
-            alert("success");
             console.log('login success',res)
             localStorage.setItem('userData', JSON.stringify(res))
             this.setState({
-                email: '',
-                password: ''
+                email: email,
+                password: password
             })
             Router.push('/components')
         }else {
             console.log('login failed')
+            this.setState({
+                email: '',
+                password: ''
+            })
         }
     }
 

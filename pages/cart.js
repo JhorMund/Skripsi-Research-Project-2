@@ -9,9 +9,7 @@ import HeaderLinks from '../components/Header/HeaderLinks';
 import firebase from '../components/config/firebase';
 import { Description } from '@material-ui/icons';
 
-
 const userId = firebase.auth().currentUser.uid
-console.log("data firebase ", firebase);
 
 const CartItem = ({ id, name, price, quantity, sum, image }) => {
     const dispatch = useDispatch();
@@ -32,7 +30,6 @@ const CartItem = ({ id, name, price, quantity, sum, image }) => {
             <p>SubTotal: <CurrencyFormat value={sum} displayType={'text'} thousandSeparator={true} prefix={'Rp. '} /></p>
             <button onClick={() => { dispatch(cartActions.addToCart(product[id - 1])) }}>Add Quantity</button>
             <button onClick={() => { dispatch(cartActions.removeFromCart(id)) }}>Remove This Item</button>
-            <button>Order</button>
         </div>
     )
 }
@@ -76,6 +73,9 @@ const Cart = () => {
             {
                 totalAmount !== 0 &&
                 <h2>Grand Total: <CurrencyFormat value={totalAmount} displayType={'text'} thousandSeparator={true} prefix={'Rp. '} /> </h2>
+            }
+            {
+                <button>Order</button>
             }
         </Layout>
         
