@@ -37,7 +37,7 @@ const ProductItem = ({ id, image, name, price, description, category }) => {
                         <h3><CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'Rp. '} /></h3>
                         <h6 typeof="100">{description}</h6>
                         <p>Category : {category}</p>
-                        <button onClick={() => { dispatch(wishListActions.addToWishList(product[id - 1])) }}>Add To Wishlist</button>
+                        {/* <button onClick={() => { dispatch(wishListActions.addToWishList(product[id - 1])) }}>Add To Wishlist</button> */}
                         <ButtonLink title="View" id={id} path="product-detail" />
                         <button onClick={() => { dispatch(cartActions.addToCart(product[id - 1])) }}>Add To Cart</button>
                     </GridItem>

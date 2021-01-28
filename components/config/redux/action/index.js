@@ -19,6 +19,7 @@ export const registerUserAPI = (data) => (dispatch) => {
                 username: data.name,
                 email: data.email,
                 alamat: data.alamat,
+                password: data.password,
                 date: new Date().getTime()
                 
             })

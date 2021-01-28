@@ -60,15 +60,15 @@ export default function HeaderLinks() {
             <a className={classes.link}>Cart({Object.keys(cart).length})</a>
         </Link>
         </Button>
-        <Button
-          className= {classes.navLink}
-          color= "transparent"
-          target="_blank"
-        >
-        <Link href="/wishlist">
-            <a style={classes.link}>Wishlist({Object.keys(wishlist).length})</a>
-        </Link>
-        </Button>
+          {/* <Button
+            className= {classes.navLink}
+            color= "transparent"
+            target="_blank"
+          >
+          <Link href="/wishlist">
+              <a style={classes.link}>Wishlist({Object.keys(wishlist).length})</a>
+          </Link>
+        </Button> */}
 
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -89,8 +89,8 @@ export default function HeaderLinks() {
               <Link href="/profile">
               <a className={classes.dropdownLink}>Profile</a>
             </Link>,
-            <Link href="/login">
-            <a className={classes.dropdownLink}>Login</a>
+            <Link href="/logout">
+            <a className={classes.dropdownLink}>Log out</a>
           </Link>
 
             ]}

@@ -17,9 +17,9 @@ const Header = () => {
             <Link href="/cart">
                 <a style={linkStyle}>Cart({Object.keys(cart).length})</a>
             </Link>
-            <Link href="/wishlist">
+            {/* <Link href="/wishlist">
                 <a style={linkStyle}>Wishlist({Object.keys(wishlist).length})</a>
-            </Link>
+            </Link> */}
         </div>
     )
 }

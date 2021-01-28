@@ -69,7 +69,7 @@ const ProductDetail = props => {
                                             <h3>{selectedProduct.productPrice}</h3>
                                             <p>{selectedProduct.productDescription}</p>
                                             <p>Category: {selectedProduct.productCategory}</p>
-                                            <button onClick={() => { dispatch(wishListActions.addToWishList(selectedProduct)) }}>Add To Wishlist</button>
+                                            {/* <button onClick={() => { dispatch(wishListActions.addToWishList(selectedProduct)) }}>Add To Wishlist</button> */}
                                             <button onClick={() => { dispatch(cartActions.addToCart(selectedProduct)) }}>Add To Cart</button>
                                         </GridItem>
                                     </td>
